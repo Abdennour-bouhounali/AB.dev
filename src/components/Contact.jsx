@@ -26,8 +26,8 @@ export default function Contact() {
     e.preventDefault();
     setStatus('loading');
 
-    try {
-      // Simulate network request
+    if (!developerInfo.formspreeId) {
+      console.warn("Formspree ID not configured in src/data/portfolioData.js. Running in mock submission mode.");
       await new Promise((resolve) => setTimeout(resolve, 1500));
       setStatus('success');
       setFormData({
@@ -37,7 +37,39 @@ export default function Contact() {
         budget: 'tier1',
         details: ''
       });
+      return;
+    }
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${developerInfo.formspreeId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          projectType: getProjectLabel(formData.projectType),
+          budget: formData.budget,
+          message: formData.details
+        })
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          projectType: 'webapp',
+          budget: 'tier1',
+          details: ''
+        });
+      } else {
+        setStatus('error');
+      }
     } catch (err) {
+      console.error("Formspree submission error:", err);
       setStatus('error');
     }
   };

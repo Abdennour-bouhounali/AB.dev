@@ -6,6 +6,7 @@ export const developerInfo = {
   tagline: "I build high-performance web systems that turn visitors into paying clients.",
   subtitle: "Freelance Full-Stack Developer specializing in bespoke React frontends, robust Laravel backends, and conversion-focused architectures that drive business results.",
   email: "abdennour.bouhounali@gmail.com",
+  formspreeId: "", // Paste your Formspree Form ID here (e.g. "xanyevgw") to receive form submissions directly in your email!
   targetClients: "Small Businesses, Restaurants, Local Shops, Artisans, Coaches & Startups",
   socials: {
     github: "https://github.com",
