@@ -1,0 +1,224 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "work": "Work",
+    "process": "Process",
+    "faq": "FAQ",
+    "cta": "Discuss Project"
+  },
+  "hero": {
+    "badge": "Available for custom contracts",
+    "headline": "Full Stack React & Laravel Developer",
+    "headlineAccent": "Helping businesses build modern websites and web applications.",
+    "subheadline": "Full Stack Developer specializing in React, TailwindCSS and Laravel. Based in Vélizy-Villacoublay, France.",
+    "ctaWork": "View My Work",
+    "ctaContact": "Contact Me",
+    "trustTitle": "Partnering with ambitious businesses & teams",
+    "trustLoc": "Vélizy-Villacoublay, France",
+    "trustRoi": "ROI-Driven Development",
+    "trustSec": "Scalable & Secure Architecture"
+  },
+  "about": {
+    "title": "About Me",
+    "headline": "Engineering web systems that turn your visitors into clients",
+    "desc1": "I am Abdennour Bouhounali, a freelance Full Stack Web Developer based in France. I help local and global companies scale by building blazing-fast, beautiful, and results-driven custom web applications.",
+    "desc2": "My development strategy balances rigorous technical architecture with a strong business-growth mindset, ensuring clean codebase expandability and longevity.",
+    "pillar1Title": "Performance First",
+    "pillar1Desc": "Blazing-fast load speeds reduce visitor drop-offs and directly boost search rankings on Google.",
+    "pillar2Title": "Conversion Focused",
+    "pillar2Desc": "Every component and interface layout is built to guide visitors seamlessly to purchase forms or call bookings."
+  },
+  "why": {
+    "title": "Why Work With Me?",
+    "supportFr": "French-speaking support 🇫🇷",
+    "supportEn": "English-speaking support 🇬🇧",
+    "supportAr": "Arabic-speaking support 🇩🇿",
+    "fastDelivery": "Fast delivery",
+    "mobileFirst": "Mobile-first design",
+    "seoReady": "SEO-ready websites",
+    "modernStack": "Modern React & Laravel stack"
+  },
+  "services": {
+    "title": "Services",
+    "headline": "Bespoke engineering for digital acceleration",
+    "desc": "From quick prototyping to production scaling, I build high-performance web systems tailored to your needs.",
+    "webapp": {
+      "title": "React Web Apps",
+      "desc": "Smooth, modern single-page applications built with React and Tailwind CSS for optimized rendering and premium user experience.",
+      "feat1": "Dynamic UI responsiveness",
+      "feat2": "Component reuse optimization",
+      "feat3": "State management layouts",
+      "val": "Optimized client experience"
+    },
+    "ecommerce": {
+      "title": "Laravel E-Commerce",
+      "desc": "Fast, secure transactional storefronts designed to remove user friction, secure payments, and boost e-commerce sales.",
+      "feat1": "Frictionless checkout paths",
+      "feat2": "Custom inventory dashboard",
+      "feat3": "Payment gateway integrations",
+      "val": "Boosted checkout conversions"
+    },
+    "api": {
+      "title": "APIs & Automations",
+      "desc": "Custom backend API services, secure third-party database integrations, and automated workflows to reduce company overhead.",
+      "feat1": "Third-party system connections",
+      "feat2": "Custom data storage pipelines",
+      "feat3": "Automated sync scripts",
+      "val": "Reduced operational manual work"
+    }
+  },
+  "skills": {
+    "title": "Technologies",
+    "headline": "A production-grade modern stack",
+    "desc": "I build exclusively with industry-validated open-source tools to ensure maximum speeds, simple maintenance, and high security.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "items": {
+      "react": "Powering dynamic, interactive interfaces with fast client-side rendering.",
+      "tailwindcss": "Highly customizable, utility-first styling for clean, responsive UI layouts.",
+      "laravel": "Providing robust logic, routing, security, and clean MVC structure.",
+      "php": "Scalable server-side script engine for enterprise-grade backend infrastructure.",
+      "javascript": "Enabling custom, interactive clients and dynamic behavior.",
+      "html": "Standardized semantic markup structure for accessibility and SEO.",
+      "css": "Custom layout parameters and smooth transition rules.",
+      "mysql": "Structured, transactional data storage to ensure records remain reliable."
+    }
+  },
+  "projects": {
+    "title": "Case Studies",
+    "subtitle": "Designed for real-world growth",
+    "desc": "Bespoke platforms engineered to solve operational bottlenecks and maximize client conversions.",
+    "study": "Case Study",
+    "visit": "Visit",
+    "tabs": {
+      "all": "All Projects",
+      "ecommerce": "E-Commerce Store",
+      "nonprofit": "Non-Profit Platform"
+    },
+    "tagemi": {
+      "title": "Global Foundation Platform",
+      "summary": "A highly optimized, accessible web platform built to showcase initiatives and secure support. Engineered using modern frontend performance techniques to load instantly even on limited cellular networks.",
+      "bullet1": "100% accessible layout for global users",
+      "bullet2": "Optimized images for low-bandwidth cellular loading",
+      "bullet3": "Secure user registration API integrations",
+      "metric1Val": "100%",
+      "metric1Lbl": "Accessible Markup",
+      "metric2Val": "<1.2s",
+      "metric2Lbl": "Interactive Load"
+    },
+    "fisora": {
+      "title": "Conversion-Driven E-Commerce",
+      "summary": "A custom storefront backed by a fast transactional system. Eliminates standard checkout bottlenecks, allowing customers to easily filter products, add to cart, and check out securely in a few clicks.",
+      "bullet1": "Frictionless checkout structure (35% faster flow)",
+      "bullet2": "Custom inventory administration controls",
+      "bullet3": "High-performance database query handling",
+      "metric1Val": "35%",
+      "metric1Lbl": "Faster Checkout Flow",
+      "metric2Val": "Zero",
+      "metric2Lbl": "Third-party Fee Bloat"
+    }
+  },
+  "process": {
+    "title": "Roadmap",
+    "headline": "How we take your project from idea to launch",
+    "desc": "A streamlined, transparent development process focused on clarity, updates, and hitting deadlines.",
+    "steps": {
+      "1": {
+        "title": "Discovery Call",
+        "desc": "Defining project objectives, user personas, and scoping features."
+      },
+      "2": {
+        "title": "Architecture & Design",
+        "desc": "Mapping wireframes, data structures, and designing high-fidelity layouts."
+      },
+      "3": {
+        "title": "Development",
+        "desc": "Writing modular frontend React code and linking it to secure backend Laravel endpoints."
+      },
+      "4": {
+        "title": "Launch & Support",
+        "desc": "Testing and optimizing the production release followed by ongoing site support."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "headline": "Real feedback from business partners",
+    "desc": "What my clients say about my focus on technical efficiency and business-first solutions.",
+    "items": {
+      "0": {
+        "name": "Sarah Jenkins",
+        "role": "COO at Fisora",
+        "quote": "Working with Abdennour transformed our online sales pipeline. The custom checkouts he built decreased order drop-offs by 35% in the first two weeks alone."
+      },
+      "1": {
+        "name": "Marc-Antoine",
+        "role": "Director at Tagemi Foundation",
+        "quote": "His focus on page performance and accessible coding meant our charity page is accessible by users even with very slow cellular connections."
+      },
+      "2": {
+        "name": "Elise Dupont",
+        "role": "Founder of Maison Dupont",
+        "quote": "A professional developer who understands business goals. He built a high-converting reservation site that doubled our bookings."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "headline": "Ready to scale your business presence?",
+    "desc": "Let's collaborate on building a high-performance custom platform that turns your visitors into paying clients.",
+    "statusTitle": "Availability Status",
+    "statusValue": "Accepting 2 new client contracts this month",
+    "emailLabel": "Direct Email",
+    "locLabel": "Location",
+    "whyTitle": "Why work with me?",
+    "why1": "Direct developer contact — no account managers",
+    "why2": "Transparent progress updates via active staging links",
+    "why3": "Comprehensive post-launch technical documentation",
+    "form": {
+      "name": "Your Name *",
+      "namePlaceholder": "e.g. John Doe",
+      "email": "Email Address *",
+      "emailPlaceholder": "e.g. john@company.com",
+      "type": "Project Type",
+      "typeWebapp": "Custom React Web Application",
+      "typeEcommerce": "Laravel / MySQL E-Commerce Store",
+      "typeApi": "API Integration & Automation",
+      "typeOther": "Other custom development",
+      "budget": "Estimated Budget",
+      "goals": "Tell me about your business goals *",
+      "goalsPlaceholder": "Describe the current challenges you face and what you want your new platform to solve...",
+      "submit": "Send Inquiry Proposal",
+      "submitLoading": "Sending proposal...",
+      "successTitle": "Proposal Sent Successfully!",
+      "successText": "I have received your request for the project. I will review your goals and reply to you within 24 hours.",
+      "errorTitle": "Submission Failed",
+      "errorText": "Please check the input details or reach out directly by email."
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "headline": "Frequently Asked Questions",
+    "desc": "Clear, upfront answers about my design workflow, technology stacks, and collaborative terms.",
+    "askTitle": "Have a different question?",
+    "askCTA": "Ask me directly",
+    "q1": "What is your development process?",
+    "a1": "We start with a details call to define your goals. Next, I plan the architecture, build the interface on a live staging site, test for bugs and responsiveness, and launch after approval.",
+    "q2": "Which technologies do you specialize in?",
+    "a2": "I specialize in React and Tailwind CSS on the frontend, and Laravel paired with MySQL on the backend. This combination ensures optimal speeds and reliable data security.",
+    "q3": "How long does a typical web application project take?",
+    "a3": "It varies based on complexity. On average, custom React or Laravel web applications take between 3 to 8 weeks from discovery to official launch.",
+    "q4": "Do you provide post-launch maintenance?",
+    "a4": "Yes, all my standard project handovers include 30 days of complimentary technical support to ensure a smooth operational launch."
+  },
+  "footer": {
+    "desc": "Full Stack Developer specialized in building custom, high-performance web systems focused on speed, safety, and business return on investment.",
+    "nav": "Navigation",
+    "general": "General",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "based": "Based in",
+    "rights": "All rights reserved."
+  }
+}

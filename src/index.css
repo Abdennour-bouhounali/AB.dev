@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --color-brand-black: #080a10;
+  --color-brand-dark-gray: #0d0f17;
+  --color-surface-card: #121520;
+  --color-surface-card-hover: #181c2b;
+  --color-accent-blue: #3b82f6;
+  --color-accent-purple: #635bff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #080a10;
+    color: #f3f4f6;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  /* Dynamic Arabic Typography override */
+  html[lang^="ar"],
+  html[lang^="ar"] body,
+  html[lang^="ar"] .font-heading,
+  html[lang^="ar"] .font-body {
+    font-family: 'Cairo', 'Inter', sans-serif;
+  }
+}
+
+/* Custom animations and utilities */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+/* Ambient glow backgrounds */
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.glow-1 {
+  top: 0%;
+  left: 25%;
+  width: 600px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(99, 91, 255, 0.12), transparent 70%);
+}
+
+.glow-2 {
+  top: 30%;
+  right: -10%;
+  width: 500px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08), transparent 75%);
+}
+
+.glow-3 {
+  bottom: 10%;
+  left: -10%;
+  width: 550px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(99, 91, 255, 0.12), transparent 75%);
+}
+
+/* Scroll reveal classes */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

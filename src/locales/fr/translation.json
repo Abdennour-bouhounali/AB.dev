@@ -1,0 +1,224 @@
+{
+  "nav": {
+    "about": "À Propos",
+    "services": "Services",
+    "work": "Projets",
+    "process": "Méthode",
+    "faq": "FAQ",
+    "cta": "Discuter du Projet"
+  },
+  "hero": {
+    "badge": "Disponible pour contrats sur mesure",
+    "headline": "Développeur Full Stack React & Laravel",
+    "headlineAccent": "J’aide les entreprises à créer des sites web modernes et performants.",
+    "subheadline": "Développeur Full Stack spécialisé en React, TailwindCSS et Laravel. Basé à Vélizy-Villacoublay, France.",
+    "ctaWork": "Voir mes projets",
+    "ctaContact": "Me contacter",
+    "trustTitle": "En partenariat avec des entreprises & équipes ambitieuses",
+    "trustLoc": "Vélizy-Villacoublay, France",
+    "trustRoi": "Développement orienté ROI",
+    "trustSec": "Architecture évolutive et sécurisée"
+  },
+  "about": {
+    "title": "À Propos",
+    "headline": "Créer des systèmes web qui transforment vos visiteurs en clients",
+    "desc1": "Je m'appelle Abdennour Bouhounali. Je suis développeur web Full Stack basé en France. J'accompagne les entreprises locales et internationales dans leur croissance en concevant des applications web rapides, esthétiques et axées sur les résultats.",
+    "desc2": "Mon approche allie rigueur technique et compréhension des enjeux business, garantissant des solutions performantes qui s'adaptent à vos besoins futurs.",
+    "pillar1Title": "Performance d'abord",
+    "pillar1Desc": "Des temps de chargement ultra-rapides réduisent les abandons et améliorent directement votre positionnement Google SEO.",
+    "pillar2Title": "Orienté conversion",
+    "pillar2Desc": "Chaque composant et interface est conçu stratégiquement pour guider vos visiteurs vers vos formulaires d'achat ou d'appel."
+  },
+  "why": {
+    "title": "Pourquoi travailler avec moi ?",
+    "supportFr": "Support en Français 🇫🇷",
+    "supportEn": "Support en Anglais 🇬🇧",
+    "supportAr": "Support en Arabe 🇩🇿",
+    "fastDelivery": "Livraison rapide",
+    "mobileFirst": "Design pensé pour mobile (Mobile-First)",
+    "seoReady": "Sites prêts pour le référencement (SEO)",
+    "modernStack": "Stack moderne React & Laravel"
+  },
+  "services": {
+    "title": "Services",
+    "headline": "Des solutions sur mesure pour vos ambitions numériques",
+    "desc": "Du prototypage rapide à la mise en production, je conçois des systèmes performants et durables.",
+    "webapp": {
+      "title": "Applications Web React",
+      "desc": "Interfaces modernes, fluides et performantes développées avec React et Tailwind CSS pour une expérience utilisateur haut de gamme.",
+      "feat1": "Mises en page interactives et fluides",
+      "feat2": "Composants hautement réutilisables",
+      "feat3": "Optimisation poussée pour mobile",
+      "val": "Expérience utilisateur fluide et moderne"
+    },
+    "ecommerce": {
+      "title": "E-Commerce Laravel",
+      "desc": "Boutiques en ligne sur mesure rapides et sécurisées avec Laravel, MySQL et des intégrations de paiement fluides pour maximiser les ventes.",
+      "feat1": "Processus d'achat simplifié (35% plus rapide)",
+      "feat2": "Interface d'administration personnalisée",
+      "feat3": "Sécurité renforcée et paiements chiffrés",
+      "val": "Tunnel d'achat fluide maximisant les ventes"
+    },
+    "api": {
+      "title": "API & Automatisations",
+      "desc": "Intégration d'API tierces, création d'architectures backend robustes et automatisation des processus internes de votre entreprise.",
+      "feat1": "Connexions sécurisées avec des services tiers",
+      "feat2": "Stockage et traitement efficace des données",
+      "feat3": "Automatisation des tâches administratives",
+      "val": "Gain de temps opérationnel et moins d'erreurs"
+    }
+  },
+  "skills": {
+    "title": "Technologies",
+    "headline": "Une stack technique moderne et performante",
+    "desc": "J'utilise les meilleurs outils du marché pour garantir des performances optimales, une maintenance simplifiée et une sécurité robuste.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "items": {
+      "react": "Interfaces utilisateur dynamiques et interactives avec rendu rapide.",
+      "tailwindcss": "Mises en page modernes et responsives adaptées à tous les écrans.",
+      "laravel": "Bénéficiez d'une logique backend sécurisée et d'une architecture MVC robuste.",
+      "php": "Langage serveur performant pour des structures d'application d'entreprise.",
+      "javascript": "Scripts légers pour de l'interactivité dynamique côté client.",
+      "html": "Structure sémantique optimisée pour l'accessibilité et le SEO Google.",
+      "css": "Transitions fluides et designs soignés sur mesure.",
+      "mysql": "Stockage de données relationnelles sécurisé et optimisé pour les requêtes."
+    }
+  },
+  "projects": {
+    "title": "Case Studies",
+    "subtitle": "Conçu pour la croissance réelle",
+    "desc": "Des plateformes sur mesure conçues pour résoudre les goulots d'étranglement opérationnels et maximiser les conversions clients.",
+    "study": "Étude de Cas",
+    "visit": "Visiter",
+    "tabs": {
+      "all": "Tous les Projets",
+      "ecommerce": "Boutique E-Commerce",
+      "nonprofit": "Plateforme Association"
+    },
+    "tagemi": {
+      "title": "Plateforme Humanitaire Globale",
+      "summary": "Une plateforme web hautement optimisée et accessible conçue pour présenter des initiatives et obtenir des soutiens. Conçue avec des techniques de performance frontend modernes pour charger instantanément, même sur des réseaux cellulaires limités.",
+      "bullet1": "Mise en page 100% accessible pour les utilisateurs mondiaux",
+      "bullet2": "Images optimisées pour le chargement mobile à faible bande passante",
+      "bullet3": "Intégrations d'API d'inscription utilisateur sécurisées",
+      "metric1Val": "100%",
+      "metric1Lbl": "Code Accessible",
+      "metric2Val": "<1.2s",
+      "metric2Lbl": "Chargement Interactif"
+    },
+    "fisora": {
+      "title": "E-Commerce axé sur la Conversion",
+      "summary": "Une vitrine sur mesure soutenue par un système transactionnel rapide. Élimine les obstacles de paiement standard, permettant aux clients de filtrer facilement les produits, de les ajouter au panier et de payer en toute sécurité en quelques clics.",
+      "bullet1": "Parcours d'achat fluide (tunnel de commande 35% plus rapide)",
+      "bullet2": "Contrôles d'administration personnalisés des stocks",
+      "bullet3": "Gestion de requêtes de base de données haute performance",
+      "metric1Val": "35%",
+      "metric1Lbl": "Achat Plus Rapide",
+      "metric2Val": "Zéro",
+      "metric2Lbl": "Frais Tiers Superflus"
+    }
+  },
+  "process": {
+    "title": "roadmap",
+    "headline": "Comment nous passons de votre idée à la mise en ligne",
+    "desc": "Un processus de développement fluide, transparent et axé sur les délais de livraison.",
+    "steps": {
+      "1": {
+        "title": "Cadrage du projet",
+        "desc": "Nous définissons ensemble vos objectifs commerciaux, vos cibles et les fonctionnalités clés de l'application."
+      },
+      "2": {
+        "title": "Architecture & Design",
+        "desc": "Création des schémas de base de données, des parcours utilisateurs et des maquettes d'interface."
+      },
+      "3": {
+        "title": "Développement",
+        "desc": "Codage de l'interface React responsive et interfaçage avec les APIs sécurisées de Laravel."
+      },
+      "4": {
+        "title": "Lancement & Support",
+        "desc": "Tests complets, optimisation SEO, mise en ligne en production et support technique offert de 30 jours."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Témoignages",
+    "headline": "Ils me font confiance",
+    "desc": "Découvrez les retours de mes clients sur la qualité technique et l'impact commercial de notre collaboration.",
+    "items": {
+      "0": {
+        "name": "Sarah Jenkins",
+        "role": "Directrice Générale chez Fisora",
+        "quote": "Collaborer avec Abdennour a transformé nos ventes. Le parcours d'achat ultra-rapide qu'il a conçu a réduit nos taux d'abandon de panier de 35%."
+      },
+      "1": {
+        "name": "Marc-Antoine",
+        "role": "Directeur de la Fondation Tagemi",
+        "quote": "Son souci d'accessibilité et d'optimisation mobile a permis à notre site d'être pleinement fonctionnel même avec des connexions réseau très limitées."
+      },
+      "2": {
+        "name": "Elise Dupont",
+        "role": "Fondatrice de la Maison Dupont",
+        "quote": "Un développeur qui comprend vraiment les besoins des entreprises. Le site de réservation sur mesure qu'il a conçu a doublé nos réservations."
+      }
+    }
+  },
+  "contact": {
+    "title": "Entrer en contact",
+    "headline": "Prêt à développer la présence de votre entreprise ?",
+    "desc": "Collaborons ensemble pour concevoir une plateforme sur mesure et performante qui transforme vos visiteurs en clients payants.",
+    "statusTitle": "Disponibilité",
+    "statusValue": "Disponible pour 2 nouveaux contrats ce mois-ci",
+    "emailLabel": "Email Direct",
+    "locLabel": "Localisation",
+    "whyTitle": "Pourquoi travailler avec moi ?",
+    "why1": "Contact direct avec le développeur — sans intermédiaire",
+    "why2": "Mises à jour transparentes via des liens de staging actifs",
+    "why3": "Documentation technique complète après livraison",
+    "form": {
+      "name": "Votre Nom *",
+      "namePlaceholder": "ex. Jean Dupont",
+      "email": "Adresse Email *",
+      "emailPlaceholder": "ex. jean@entreprise.com",
+      "type": "Type de Projet",
+      "typeWebapp": "Application Web React sur mesure",
+      "typeEcommerce": "Boutique E-Commerce Laravel / MySQL",
+      "typeApi": "Intégration d'API et Automatisation",
+      "typeOther": "Autre développement sur mesure",
+      "budget": "Budget Estimé",
+      "goals": "Parlez-moi de vos objectifs commerciaux *",
+      "goalsPlaceholder": "Décrivez les défis actuels que vous rencontrez et ce que vous souhaitez que votre nouvelle plateforme résolve...",
+      "submit": "Envoyer la proposition d'enquête",
+      "submitLoading": "Envoi de la proposition...",
+      "successTitle": "Proposition envoyée avec succès !",
+      "successText": "J'ai bien reçu votre demande pour le projet. Je vais examiner vos objectifs et vous répondrai dans les 24 heures.",
+      "errorTitle": "Échec de la soumission",
+      "errorText": "Veuillez vérifier les informations saisies ou me contacter directement par email."
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "headline": "Questions fréquemment posées",
+    "desc": "Des réponses claires sur mes méthodes de travail, mes technologies et le déroulement d'une collaboration.",
+    "askTitle": "Vous avez une autre question ?",
+    "askCTA": "Me contacter directement",
+    "q1": "Quel est votre processus de travail ?",
+    "a1": "Nous commençons par un appel pour définir vos objectifs. Ensuite, je conçois l'architecture de la solution, développe l'application sur un lien de préproduction en direct, et procède à la mise en ligne après validation et tests.",
+    "q2": "Quelles technologies utilisez-vous ?",
+    "a2": "Je me spécialise dans React et Tailwind CSS pour le frontend, et Laravel avec MySQL pour le backend. Cette stack offre d'excellentes performances et une sécurité maximale.",
+    "q3": "Combien de temps faut-il pour créer une application web ?",
+    "a3": "Cela dépend de la complexité. En moyenne, une application web sur mesure prend entre 3 et 8 semaines, de la phase de cadrage au lancement.",
+    "q4": "Fournissez-vous un support après le lancement ?",
+    "a4": "Oui, tous mes projets incluent 30 jours de support technique gratuit pour garantir un lancement en toute sérénité."
+  },
+  "footer": {
+    "desc": "Développeur Full Stack spécialisé dans la conception de plateformes web sur mesure axées sur la performance et le retour sur investissement.",
+    "nav": "Navigation",
+    "general": "Légal",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "based": "Basé à",
+    "rights": "Tous droits réservés."
+  }
+}
