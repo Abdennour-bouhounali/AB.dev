@@ -94,7 +94,8 @@
     "tabs": {
       "all": "Tous les Projets",
       "ecommerce": "Boutique E-Commerce",
-      "nonprofit": "Plateforme Association"
+      "nonprofit": "Plateforme Association",
+      "concept": "Concepts & Redesigns"
     },
     "tagemi": {
       "title": "Plateforme Humanitaire Globale",
@@ -117,6 +118,28 @@
       "metric1Lbl": "Achat Plus Rapide",
       "metric2Val": "Zéro",
       "metric2Lbl": "Frais Tiers Superflus"
+    },
+    "mansouria": {
+      "title": "Mansouria Paris",
+      "summary": "Un concept de refonte UI/UX complète pour un restaurant marocain historique à Paris, créant une expérience digitale premium inspirée de l'hospitalité de niveau Michelin et du storytelling depuis 1984.",
+      "bullet1": "Identité visuelle modernisée & expérience digitale premium",
+      "bullet2": "Storytelling émotionnel mettant en valeur 40 ans de patrimoine",
+      "bullet3": "Expérience mobile optimisée pour augmenter les réservations",
+      "metric1Val": "1984",
+      "metric1Lbl": "Héritage Depuis",
+      "metric2Val": "100%",
+      "metric2Lbl": "Concept Redesign"
+    },
+    "maisonsaha": {
+      "title": "Maison Saha",
+      "summary": "Un concept de site premium pour un coffee shop & brunch moderne, transformant un menu traditionnel en un voyage digital immersif avec storytelling, présentation produit soignée et une expérience mobile-first.",
+      "bullet1": "Branding premium avec storytelling digital immersif",
+      "bullet2": "Menu digital interactif avec fiches produits élégantes",
+      "bullet3": "Expérience luxury coffee shop pensée pour mobile",
+      "metric1Val": "100%",
+      "metric1Lbl": "Mobile-First",
+      "metric2Val": "Premium",
+      "metric2Lbl": "Expérience de Marque"
     }
   },
   "process": {
@@ -124,19 +147,19 @@
     "headline": "Comment nous passons de votre idée à la mise en ligne",
     "desc": "Un processus de développement fluide, transparent et axé sur les délais de livraison.",
     "steps": {
-      "1": {
+      "01": {
         "title": "Cadrage du projet",
         "desc": "Nous définissons ensemble vos objectifs commerciaux, vos cibles et les fonctionnalités clés de l'application."
       },
-      "2": {
+      "02": {
         "title": "Architecture & Design",
         "desc": "Création des schémas de base de données, des parcours utilisateurs et des maquettes d'interface."
       },
-      "3": {
+      "03": {
         "title": "Développement",
         "desc": "Codage de l'interface React responsive et interfaçage avec les APIs sécurisées de Laravel."
       },
-      "4": {
+      "04": {
         "title": "Lancement & Support",
         "desc": "Tests complets, optimisation SEO, mise en ligne en production et support technique offert de 30 jours."
       }

@@ -94,7 +94,8 @@
     "tabs": {
       "all": "All Projects",
       "ecommerce": "E-Commerce Store",
-      "nonprofit": "Non-Profit Platform"
+      "nonprofit": "Non-Profit Platform",
+      "concept": "Concept Redesigns"
     },
     "tagemi": {
       "title": "Global Foundation Platform",
@@ -117,6 +118,28 @@
       "metric1Lbl": "Faster Checkout Flow",
       "metric2Val": "Zero",
       "metric2Lbl": "Third-party Fee Bloat"
+    },
+    "mansouria": {
+      "title": "Mansouria Paris",
+      "summary": "A complete UI/UX concept redesign for a historic Moroccan restaurant in Paris, creating a premium digital experience inspired by Michelin-level hospitality and storytelling since 1984.",
+      "bullet1": "Modernized visual identity & premium digital experience",
+      "bullet2": "Emotional storytelling highlighting 40 years of heritage",
+      "bullet3": "Optimized mobile experience to increase reservations",
+      "metric1Val": "1984",
+      "metric1Lbl": "Heritage Since",
+      "metric2Val": "100%",
+      "metric2Lbl": "Concept Redesign"
+    },
+    "maisonsaha": {
+      "title": "Maison Saha",
+      "summary": "A premium concept website for a modern brunch & coffee shop, transforming a traditional menu into an immersive digital journey with storytelling, beautiful product presentation, and a mobile-first experience.",
+      "bullet1": "Premium branding with immersive digital storytelling",
+      "bullet2": "Interactive digital menu with beautiful product cards",
+      "bullet3": "Mobile-first luxury coffee shop experience",
+      "metric1Val": "100%",
+      "metric1Lbl": "Mobile-First",
+      "metric2Val": "Premium",
+      "metric2Lbl": "Brand Experience"
     }
   },
   "process": {
@@ -124,19 +147,19 @@
     "headline": "How we take your project from idea to launch",
     "desc": "A streamlined, transparent development process focused on clarity, updates, and hitting deadlines.",
     "steps": {
-      "1": {
+      "01": {
         "title": "Discovery Call",
         "desc": "Defining project objectives, user personas, and scoping features."
       },
-      "2": {
+      "02": {
         "title": "Architecture & Design",
         "desc": "Mapping wireframes, data structures, and designing high-fidelity layouts."
       },
-      "3": {
+      "03": {
         "title": "Development",
         "desc": "Writing modular frontend React code and linking it to secure backend Laravel endpoints."
       },
-      "4": {
+      "04": {
         "title": "Launch & Support",
         "desc": "Testing and optimizing the production release followed by ongoing site support."
       }

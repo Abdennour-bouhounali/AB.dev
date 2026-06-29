@@ -92,6 +92,40 @@ export const projects = [
     url: "https://fisora.shop",
     type: "shop",
     images: ["/images/fisora-1.png", "/images/fisora-2.png", "/images/fisora-3.png"]
+  },
+  {
+    id: "mansouria",
+    domain: "mansouria-coral.vercel.app",
+    title: "Mansouria Paris",
+    summary: "A complete UI/UX concept redesign for a historic Moroccan restaurant in Paris, creating a premium digital experience inspired by Michelin-level hospitality and storytelling since 1984.",
+    tech: ["ReactJS", "TailwindCSS", "Framer Motion"],
+    metrics: [
+      { num: "1984", label: "Heritage Since" },
+      { num: "100%", label: "Concept Redesign" }
+    ],
+    url: "https://mansouria-coral.vercel.app/",
+    type: "concept",
+    category: "Luxury Restaurant Website Concept",
+    status: "Concept Redesign",
+    ctaLabel: "Voir le projet",
+    images: ["/images/mansouria-1.png", "/images/mansouria-2.png", "/images/mansouria-3.png", "/images/mansouria-4.png", "/images/mansouria-5.png"]
+  },
+  {
+    id: "maisonsaha",
+    domain: "maisonsaha.vercel.app",
+    title: "Maison Saha",
+    summary: "A premium concept website for a modern brunch & coffee shop, transforming a traditional menu into an immersive digital journey with storytelling, beautiful product presentation, and a mobile-first experience.",
+    tech: ["ReactJS", "TailwindCSS", "Framer Motion"],
+    metrics: [
+      { num: "100%", label: "Mobile-First" },
+      { num: "Premium", label: "Brand Experience" }
+    ],
+    url: "https://maisonsaha.vercel.app/",
+    type: "concept",
+    category: "Premium Brunch & Coffee Shop Website Concept",
+    status: "Concept Website",
+    ctaLabel: "Voir le projet",
+    images: ["/images/maisonsaha-1.png", "/images/maisonsaha-2.png", "/images/maisonsaha-3.png", "/images/maisonsaha-4.png"]
   }
 ];
 

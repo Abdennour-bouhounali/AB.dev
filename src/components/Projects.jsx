@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ExternalLink, Check } from 'lucide-react';
+import { ExternalLink, Check, Globe, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '../data/portfolioData';
 import AnimatedCounter from './AnimatedCounter';
@@ -11,7 +11,9 @@ export default function Projects() {
   const [filter, setFilter] = useState('all');
   const [activeSlides, setActiveSlides] = useState({
     tagemi: 0,
-    fisora: 0
+    fisora: 0,
+    mansouria: 0,
+    maisonsaha: 0
   });
 
   useEffect(() => {
@@ -65,6 +67,7 @@ export default function Projects() {
     if (filter === 'all') return true;
     if (filter === 'ecommerce') return project.type === 'shop';
     if (filter === 'nonprofit') return project.type === 'foundation';
+    if (filter === 'concept') return project.type === 'concept';
     return true;
   });
 
@@ -110,11 +113,12 @@ export default function Projects() {
         </div>
 
         {/* Dynamic Filtering Tabs */}
-        <div className="flex justify-center gap-3 mb-20 select-none">
+        <div className="flex flex-wrap justify-center gap-3 mb-20 select-none">
           {[
             { id: 'all', label: t("projects.tabs.all") },
             { id: 'ecommerce', label: t("projects.tabs.ecommerce") },
-            { id: 'nonprofit', label: t("projects.tabs.nonprofit") }
+            { id: 'nonprofit', label: t("projects.tabs.nonprofit") },
+            { id: 'concept', label: t("projects.tabs.concept") }
           ].map((tab) => (
             <button
               key={tab.id}
@@ -153,9 +157,23 @@ export default function Projects() {
                   <div className={`lg:col-span-6 flex flex-col ${
                     isReversed ? "lg:order-2" : "lg:order-1"
                   }`}>
-                    <span className="text-[10px] font-bold text-accent-purple mb-2 tracking-widest uppercase select-none">
-                      0{index + 1} / {t("projects.study")}
-                    </span>
+                    {/* Index + Category row */}
+                    <div className="flex items-center gap-3 mb-3 flex-wrap">
+                      <span className="text-[10px] font-bold text-accent-purple tracking-widest uppercase select-none">
+                        0{index + 1} / {t("projects.study")}
+                      </span>
+                      {project.category && (
+                        <span className="text-[9px] font-semibold text-zinc-400 border border-white/10 bg-white/3 px-2.5 py-1 rounded-full uppercase tracking-wider select-none">
+                          {project.category}
+                        </span>
+                      )}
+                      {project.status && (
+                        <span className="text-[9px] font-bold text-amber-400/80 border border-amber-400/20 bg-amber-400/5 px-2.5 py-1 rounded-full uppercase tracking-wider select-none">
+                          {project.status}
+                        </span>
+                      )}
+                    </div>
+
                     <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white mb-4 tracking-tight hover:text-accent-blue transition-colors duration-200">
                       {project.title}
                     </h3>
@@ -202,18 +220,35 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    {/* External link with Magnetic Wrapper */}
-                    <Magnetic>
-                      <a 
-                        href={project.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-white border-b-2 border-accent-blue pb-0.5 self-start hover:text-accent-purple hover:border-accent-purple transition-all duration-200"
-                      >
-                        <span>{t("projects.visit")} {project.domain}</span>
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </a>
-                    </Magnetic>
+                    {/* CTA — concept projects get premium button, live projects get underline link */}
+                    {project.type === 'concept' ? (
+                      <Magnetic>
+                        <motion.a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.03 }}
+                          whileTap={{ scale: 0.97 }}
+                          className="inline-flex items-center gap-2 self-start px-5 py-2.5 rounded-full text-xs font-bold text-white bg-gradient-to-r from-accent-purple to-accent-blue shadow-[0_0_20px_rgba(99,91,255,0.25)] hover:shadow-[0_0_30px_rgba(99,91,255,0.4)] border border-white/10 transition-all duration-300"
+                        >
+                          <Globe className="w-3.5 h-3.5" />
+                          <span>{project.ctaLabel || t("projects.visit")}</span>
+                          <ArrowUpRight className="w-3.5 h-3.5" />
+                        </motion.a>
+                      </Magnetic>
+                    ) : (
+                      <Magnetic>
+                        <a 
+                          href={project.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-white border-b-2 border-accent-blue pb-0.5 self-start hover:text-accent-purple hover:border-accent-purple transition-all duration-200"
+                        >
+                          <span>{t("projects.visit")} {project.domain}</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      </Magnetic>
+                    )}
                   </div>
 
                   {/* Visual Mockup block */}
