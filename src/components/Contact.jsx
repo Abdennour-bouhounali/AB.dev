@@ -259,10 +259,10 @@ export default function Contact() {
                     onChange={handleChange}
                     className="bg-brand-black border border-white/8 rounded-sm p-3.5 text-white text-xs focus:outline-none transition-all appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23a1a1aa%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_14px_center] bg-[length:14px] pr-10 rtl:bg-[left_14px_center]"
                   >
-                    <option value="tier1">&lt; €3,000</option>
-                    <option value="tier2">€3,000 - €5,000</option>
-                    <option value="tier3">€5,000 - €10,000</option>
-                    <option value="tier4">€10,000+</option>
+                    <option value="tier1">€300 - €1,000</option>
+                    <option value="tier2">€1,000 - €3,000</option>
+                    <option value="tier3">€3,000 - €7,000</option>
+                    <option value="tier4">€7,000+</option>
                   </motion.select>
                 </div>
               </div>
