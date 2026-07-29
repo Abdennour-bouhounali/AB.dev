@@ -1,15 +1,51 @@
 @import "tailwindcss";
 
-@theme {
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-bg: #f9fafb;
+  --color-text: #1f2937;
+  --color-brand-black: #f9fafb;
+  --color-brand-dark-gray: #f3f4f6;
+  --color-surface-card: #ffffff;
+  --color-surface-card-hover: #f3f4f6;
+  --color-border-glow: rgba(59, 130, 246, 0.1);
   
+  /* Light mode: text-zinc-400 and text-zinc-500 will map to readable darker greys */
+  --color-zinc-400-var: #4b5563;
+  --color-zinc-500-var: #374151;
+  --opacity-glow: 0.12;
+}
+
+.dark {
+  --color-bg: #080a10;
+  --color-text: #f3f4f6;
   --color-brand-black: #080a10;
   --color-brand-dark-gray: #0d0f17;
   --color-surface-card: #121520;
   --color-surface-card-hover: #181c2b;
+  --color-border-glow: rgba(255, 255, 255, 0.08);
+  
+  /* Dark mode: text-zinc-400 and text-zinc-500 will map to much lighter greys for contrast */
+  --color-zinc-400-var: #e4e4e7; /* zinc-200 */
+  --color-zinc-500-var: #d4d4d8; /* zinc-300 */
+  --opacity-glow: 0.25;
+}
+
+@theme {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --color-brand-black: var(--color-brand-black);
+  --color-brand-dark-gray: var(--color-brand-dark-gray);
+  --color-surface-card: var(--color-surface-card);
+  --color-surface-card-hover: var(--color-surface-card-hover);
   --color-accent-blue: #3b82f6;
   --color-accent-purple: #635bff;
+  
+  /* Dynamic mappings for standard Tailwind zinc colors used in layout */
+  --color-zinc-400: var(--color-zinc-400-var);
+  --color-zinc-500: var(--color-zinc-500-var);
 }
 
 @layer base {
@@ -17,18 +53,11 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: #080a10;
-    color: #f3f4f6;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-  }
-  /* Dynamic Arabic Typography override */
-  html[lang^="ar"],
-  html[lang^="ar"] body,
-  html[lang^="ar"] .font-heading,
-  html[lang^="ar"] .font-body {
-    font-family: 'Cairo', 'Inter', sans-serif;
   }
 }
 
@@ -42,7 +71,7 @@
   height: 14px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  border-top-color: #fff;
+  border-top-color: currentColor;
   animation: spin 1s ease-in-out infinite;
 }
 
@@ -53,7 +82,8 @@
   filter: blur(120px);
   z-index: -1;
   pointer-events: none;
-  opacity: 0.25;
+  opacity: var(--opacity-glow);
+  transition: opacity 0.3s ease;
 }
 
 .glow-1 {

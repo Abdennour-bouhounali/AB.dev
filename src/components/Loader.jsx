@@ -41,7 +41,7 @@ export default function Loader({ onComplete }) {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="font-heading font-extrabold text-3xl tracking-tight text-white mb-6"
         >
-          <span className="text-accent-blue">AB</span>.dev
+          <span className="text-accent-blue">Edu</span>Nex
         </motion.div>
         
         {/* Counting indicator */}

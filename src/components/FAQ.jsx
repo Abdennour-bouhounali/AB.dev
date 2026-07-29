@@ -22,16 +22,16 @@ export default function FAQ() {
             <span className="inline-block text-[10px] uppercase tracking-wider text-accent-blue font-bold mb-3">
               {t("faq.title")}
             </span>
-            <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-white tracking-tight leading-snug">
+            <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-zinc-900 dark:text-white tracking-tight leading-snug">
               {t("faq.headline")}
             </h2>
-            <p className="text-zinc-400 text-xs sm:text-sm mt-4 leading-relaxed">
+            <p className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm mt-4 leading-relaxed">
               {t("faq.desc")}
             </p>
           </div>
           
-          <div className="mt-8 p-6 bg-brand-dark-gray border border-white/8 rounded-md hidden lg:block">
-            <p className="text-zinc-400 text-xs mb-3">{t("faq.askTitle")}</p>
+          <div className="mt-8 p-6 bg-brand-dark-gray dark:bg-brand-dark-gray light:bg-zinc-100 border border-white/8 dark:border-white/8 light:border-zinc-200 rounded-md hidden lg:block">
+            <p className="text-zinc-550 dark:text-zinc-400 text-xs mb-3">{t("faq.askTitle")}</p>
             <a 
               href="#contact" 
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent-blue hover:text-accent-purple group"
@@ -49,19 +49,21 @@ export default function FAQ() {
             return (
               <div 
                 key={index}
-                className={`border border-white/8 bg-brand-dark-gray rounded-sm overflow-hidden transition-all duration-200 ${
-                  isOpen ? "bg-surface-card border-white/15" : "hover:border-white/15"
+                className={`border border-white/8 dark:border-white/8 light:border-zinc-200 bg-brand-dark-gray dark:bg-brand-dark-gray light:bg-zinc-50 rounded-sm overflow-hidden transition-all duration-205 ${
+                  isOpen 
+                    ? "bg-surface-card dark:bg-surface-card light:bg-white border-white/15 dark:border-white/15 light:border-zinc-300" 
+                    : "hover:border-white/15 dark:hover:border-white/15 light:hover:border-zinc-300"
                 }`}
               >
                 <button
                   onClick={() => toggleAccordion(index)}
                   className="w-full flex justify-between items-center p-6 bg-transparent border-none text-start cursor-pointer focus:outline-none"
                 >
-                  <span className="font-heading font-semibold text-white text-xs sm:text-sm pe-4">
+                  <span className="font-heading font-semibold text-zinc-900 dark:text-white text-xs sm:text-sm pe-4">
                     {t(`faq.q${index + 1}`)}
                   </span>
                   <ChevronDown 
-                    className={`w-4 h-4 text-zinc-400 flex-shrink-0 transition-transform duration-250 ${
+                    className={`w-4 h-4 text-zinc-500 dark:text-zinc-400 flex-shrink-0 transition-transform duration-250 ${
                       isOpen ? "transform rotate-180 text-accent-blue" : ""
                     }`} 
                   />
@@ -71,7 +73,7 @@ export default function FAQ() {
                   className={`transition-all duration-300 ease-in-out overflow-hidden`}
                   style={{ maxHeight: isOpen ? '240px' : '0px' }}
                 >
-                  <div className="p-6 pt-0 text-zinc-400 text-xs leading-relaxed border-t border-white/3">
+                  <div className="p-6 pt-0 text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed border-t border-white/3 dark:border-white/3 light:border-zinc-200">
                     {t(`faq.a${index + 1}`)}
                   </div>
                 </div>

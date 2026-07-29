@@ -1,13 +1,14 @@
-export const developerInfo = {
-  name: "Abdennour Bouhounali",
-  title: "Full Stack Developer",
+export const companyInfo = {
+  name: "EduNex",
+  title: "Cabinet de Conseil & Réalisations Numériques",
   location: "France",
-  city: "Vélizy-Villacoublay",
-  tagline: "I build high-performance web systems that turn visitors into paying clients.",
-  subtitle: "Freelance Full-Stack Developer specializing in bespoke React frontends, robust Laravel backends, and conversion-focused architectures that drive business results.",
+  city: "Toulouse",
+  tagline: "Des solutions numériques sur mesure pour propulser votre entreprise.",
+  subtitle: "EduNex accompagne les entreprises et indépendants dans la conception et le développement de solutions numériques : sites web, applications métier, plateformes SaaS, automatisation et intelligence artificielle.",
   email: "abdennour.bouhounali@gmail.com",
-  formspreeId: "meebevgl", // Paste your Formspree Form ID here (e.g. "xanyevgw") to receive form submissions directly in your email!
-  targetClients: "Small Businesses, Restaurants, Local Shops, Artisans, Coaches & Startups",
+  phone: "07 58 10 30 86",
+  formspreeId: "meebevgl",
+  targetClients: "PME, Artisans, Commerçants, Startups, Professions libérales & Associations",
   socials: {
     github: "https://github.com",
     linkedin: "https://linkedin.com"
@@ -16,40 +17,76 @@ export const developerInfo = {
 
 export const services = [
   {
-    id: "webapp",
-    title: "Bespoke React Web Applications",
+    id: "consulting",
+    title: "Conseil informatique",
     icon: "LayoutTemplate",
-    description: "Dynamic, lightning-fast user interfaces designed to provide smooth experiences on mobile and desktop alike. Perfect for client dashboards, custom interactive tools, and SaaS MVPs.",
+    description: "Analyse stratégique de vos besoins, audit technique complet de vos systèmes actuels et architecture de solutions adaptées à vos objectifs de croissance.",
     features: [
-      "Component-driven architecture",
-      "State-of-the-art responsiveness",
-      "Instant page transitions"
+      "Analyse des besoins",
+      "Audit numérique",
+      "Architecture de solutions"
     ],
-    value: "Keeps users engaged longer, reducing client drop-offs."
+    value: "Une feuille de route technologique claire pour sécuriser vos investissements."
   },
   {
-    id: "ecommerce",
-    title: "Full-Stack Laravel & PHP E-Commerce",
-    icon: "ShoppingBag",
-    description: "Custom-built online storefronts and backend systems that don't rely on restrictive, slow template builders. Gives you absolute control over inventory, checkouts, and transactional data.",
+    id: "website",
+    title: "Sites web professionnels",
+    icon: "Globe",
+    description: "Conception de sites internet vitrines modernes, performants et hautement optimisés pour le référencement naturel (SEO) et le design mobile (responsive).",
     features: [
-      "Seamless Laravel & MySQL integration",
-      "Optimized database query handling",
-      "High-performance product catalog structures"
+      "Sites vitrines premium",
+      "Optimisation SEO",
+      "Responsive design mobile-first"
     ],
-    value: "Lower cart abandonment rates and frictionless shopping experiences."
+    value: "Une présence en ligne attractive pour capter et convertir vos prospects."
   },
   {
-    id: "api",
-    title: "REST APIs & Custom Automations",
+    id: "app",
+    title: "Applications métier",
     icon: "Cpu",
-    description: "Connect your core platform with CRM systems, payment gateways, invoice tools, or legacy databases. Automate repetitive business workflows and save human resources.",
+    description: "Développement d'outils sur mesure pour structurer votre activité : tableaux de bord opérationnels, portails clients sécurisés et applications internes.",
     features: [
-      "Secure authentication integrations",
-      "Real-time webhook synchronizations",
-      "Documented, clean API architectures"
+      "Tableaux de bord (Dashboards)",
+      "Portails clients sécurisés",
+      "Outils de gestion interne"
     ],
-    value: "Eliminates manual data entry and reduces operational overhead."
+    value: "Simplifie le quotidien de vos équipes et optimise la gestion de vos opérations."
+  },
+  {
+    id: "saas",
+    title: "Plateformes SaaS",
+    icon: "Layers",
+    description: "Création d'applications web évolutives, prêtes pour le marché, avec gestion avancée des utilisateurs, abonnements et base de données centralisée.",
+    features: [
+      "Applications cloud évolutives",
+      "Gestion des rôles et utilisateurs",
+      "Centralisation sécurisée des données"
+    ],
+    value: "Une infrastructure robuste prête à accueillir vos milliers d'utilisateurs."
+  },
+  {
+    id: "automation",
+    title: "Automatisation",
+    icon: "Workflow",
+    description: "Connexion de vos outils logiciels (CRM, ERP, facturation, emailing) et automatisation de vos processus répétitifs pour éliminer les tâches manuelles.",
+    features: [
+      "Connexions d'outils via API",
+      "Optimisation des flux de travail",
+      "Synchronisation automatique de données"
+    ],
+    value: "Élimine le risque d'erreur humaine et libère du temps à forte valeur ajoutée."
+  },
+  {
+    id: "ai",
+    title: "Intelligence artificielle",
+    icon: "BrainCircuit",
+    description: "Intégration d'outils d'IA modernes dans vos processus opérationnels : agents conversationnels (chatbots), assistants internes et recherche documentaire intelligente.",
+    features: [
+      "Chatbots et agents virtuels",
+      "Assistants IA personnalisés",
+      "Recherche documentaire intelligente"
+    ],
+    value: "Améliore la réactivité de votre support et accélère la recherche d'information."
   }
 ];
 
@@ -66,129 +103,159 @@ export const skills = [
 
 export const projects = [
   {
+    id: "essalam",
+    domain: "essalam-sport.fr",
+    title: "Essalam Sport Club",
+    summary: "Plateforme de gestion complète avec dashboard administration et application mobile pour une association sportive d'envergure.",
+    tech: ["React", "TailwindCSS", "Laravel", "MySQL"],
+    bullets: [
+      "Interface d'administration intuitive pour la gestion des adhérents.",
+      "Système de notifications en temps réel pour les événements.",
+      "Application mobile responsive pour un accès direct aux calendriers."
+    ],
+    metrics: [
+      { num: "100%", label: "Gestion centralisée" },
+      { num: "Mobile", label: "Application dédiée" }
+    ],
+    url: "https://essalam-sport.fr",
+    type: "association",
+    status: "En développement",
+    images: ["/images/essalam-1.png", "/images/essalam-2.png", "/images/essalam-3.png"]
+  },
+  {
     id: "tagemi",
     domain: "tagemi-foundation.org",
-    title: "Global Foundation Platform",
-    summary: "A highly optimized, accessible web platform built to showcase initiatives and secure support. Engineered using modern frontend performance techniques to load instantly even on limited cellular networks.",
+    title: "TAGEMI Medical Platform",
+    summary: "Application de gestion multi-rôle hautement sécurisée pour coordonner les campagnes médicales et le suivi des patients.",
     tech: ["React", "TailwindCSS", "REST APIs"],
+    bullets: [
+      "Interface et rôles d'accès différenciés pour les praticiens.",
+      "Rapports d'intervention générés instantanément en PDF.",
+      "Sécurisation totale des accès et des informations médicales."
+    ],
     metrics: [
-      { num: "100%", label: "Accessible Markup" },
-      { num: "<1.2s", label: "Interactive Load" }
+      { num: "Multi-rôle", label: "Accès sécurisés" },
+      { num: "<1.2s", label: "Chargement interactif" }
     ],
     url: "https://tagemi-foundation.org",
-    type: "foundation",
+    type: "medical",
     images: ["/images/tagemi-1.png", "/images/tagemi-2.png"]
   },
   {
     id: "fisora",
     domain: "fisora.shop",
-    title: "Conversion-Driven E-Commerce",
-    summary: "A custom storefront backed by a fast transactional system. Eliminates standard checkout bottlenecks, allowing customers to easily filter products, add to cart, and check out securely in a few clicks.",
+    title: "Fisora E-Commerce",
+    summary: "Boutique en ligne personnalisée et performante avec gestion de catalogue produits, stocks et tunnel de paiement optimisé.",
     tech: ["Laravel", "MySQL", "TailwindCSS", "JavaScript"],
+    bullets: [
+      "Parcours d'achat fluide (tunnel de commande 35% plus rapide).",
+      "Gestion des stocks en temps réel sans lenteurs de plugins tiers.",
+      "Console d'administration intuitive et sur mesure."
+    ],
     metrics: [
-      { num: "35%", label: "Faster Checkout Flow" },
-      { num: "Zero", label: "Third-party Fee Bloat" }
+      { num: "35%", label: "Tunnel d'achat plus rapide" },
+      { num: "Zéro", label: "Frais tiers superflus" }
     ],
     url: "https://fisora.shop",
-    type: "shop",
+    type: "ecommerce",
     images: ["/images/fisora-1.png", "/images/fisora-2.png", "/images/fisora-3.png"]
   },
   {
-    id: "mansouria",
-    domain: "mansouria-coral.vercel.app",
-    title: "Mansouria Paris",
-    summary: "A complete UI/UX concept redesign for a historic Moroccan restaurant in Paris, creating a premium digital experience inspired by Michelin-level hospitality and storytelling since 1984.",
-    tech: ["ReactJS", "TailwindCSS", "Framer Motion"],
-    metrics: [
-      { num: "1984", label: "Heritage Since" },
-      { num: "100%", label: "Concept Redesign" }
-    ],
-    url: "https://mansouria-coral.vercel.app/",
-    type: "concept",
-    category: "Luxury Restaurant Website Concept",
-    status: "Concept Redesign",
-    ctaLabel: "Voir le projet",
-    images: ["/images/mansouria-1.png", "/images/mansouria-2.png", "/images/mansouria-3.png", "/images/mansouria-4.png", "/images/mansouria-5.png"]
-  },
-  {
     id: "maisonsaha",
-    domain: "maisonsaha.vercel.app",
+    domain: "maisonsaha.fr",
     title: "Maison Saha",
-    summary: "A premium concept website for a modern brunch & coffee shop, transforming a traditional menu into an immersive digital journey with storytelling, beautiful product presentation, and a mobile-first experience.",
-    tech: ["ReactJS", "TailwindCSS", "Framer Motion"],
+    summary: "Site vitrine premium avec expérience utilisateur moderne, storytelling immersif et présentation de menu interactive pour un brunch/café.",
+    tech: ["React", "TailwindCSS", "Framer Motion"],
+    bullets: [
+      "Identité de marque forte et storytelling digital immersif.",
+      "Menu interactif avec fiches produits élégantes.",
+      "Entièrement optimisé pour les réservations sur smartphones."
+    ],
     metrics: [
-      { num: "100%", label: "Mobile-First" },
-      { num: "Premium", label: "Brand Experience" }
+      { num: "100%", label: "Optimisé mobile-first" },
+      { num: "Premium", label: "Identité visuelle" }
     ],
     url: "https://maisonsaha.vercel.app/",
-    type: "concept",
-    category: "Premium Brunch & Coffee Shop Website Concept",
-    status: "Concept Website",
-    ctaLabel: "Voir le projet",
-    images: ["/images/maisonsaha-1.png", "/images/maisonsaha-2.png", "/images/maisonsaha-3.png", "/images/maisonsaha-4.png"]
+    type: "vitrine",
+    images: ["/images/maisonsaha-1.png", "/images/maisonsaha-2.png", "/images/maisonsaha-3.png"]
+  },
+  {
+    id: "mansouria",
+    domain: "mansouria-paris.fr",
+    title: "Mansouria Paris",
+    summary: "Présence digitale premium et expérience de marque immersive pour un restaurant gastronomique historique à Paris.",
+    tech: ["React", "TailwindCSS", "Framer Motion"],
+    bullets: [
+      "Identité visuelle moderne & expérience digitale haut de gamme.",
+      "Storytelling émotionnel mettant en valeur le patrimoine de la marque.",
+      "Expérience mobile fluide et optimisée pour augmenter les réservations."
+    ],
+    metrics: [
+      { num: "1984", label: "Histoire & Patrimoine" },
+      { num: "Luxury", label: "Design de marque" }
+    ],
+    url: "https://mansouria-coral.vercel.app/",
+    type: "vitrine",
+    images: ["/images/mansouria-1.png", "/images/mansouria-2.png"]
   }
 ];
 
 export const processSteps = [
   {
     num: "01",
-    title: "Discovery & Strategy",
-    description: "We start with a details call to define your business objectives, target audience, and product requirements. We establish clear success metrics and prepare a project specification document."
+    title: "Cadrage & Curation",
+    description: "Nous échangeons en détail pour cerner les besoins métier de votre entreprise. Nous établissons ensemble le cahier des charges technique et fonctionnel."
   },
   {
     num: "02",
     title: "Architecture & Design",
-    description: "I map out the user flows, database structures, and interactive layouts. This ensures the tech stack aligns perfectly with your goals and avoids expensive adjustments later in the build."
+    description: "Conception des parcours utilisateurs, modélisation des bases de données et élaboration des maquettes interactives pour valider les flux fonctionnels."
   },
   {
     num: "03",
-    title: "Development & Refinement",
-    description: "Writing clean, production-grade code. You receive a staging link to view live progress. I run thorough performance and unit testing to ensure compatibility across major browsers."
+    title: "Développement & Tests",
+    description: "Écriture de code propre, performant et documenté. Vous suivez l'avancée en temps réel via un lien de staging privé. Nous effectuons des audits SEO et des tests unitaires complets."
   },
   {
     num: "04",
-    title: "Launch & Handover",
-    description: "Deploying your application to optimized cloud servers. I configure SSL security, perform final speed checks, and supply customized training videos to show you how to manage your content effortlessly."
+    title: "Lancement & Suivi",
+    description: "Déploiement sur des serveurs cloud sécurisés et optimisés, configuration SSL, formation de vos équipes et phase d'accompagnement post-mise en ligne."
   }
 ];
 
 export const testimonials = [
   {
-    name: "Mathieu R.",
-    role: "Founder, Local Artisan Collective",
-    quote: "Abdennour built our application from scratch. He was responsive, understood our commercial workflow instantly, and delivered a React dashboard that our staff uses daily without training. Load times dropped significantly compared to our old system."
+    name: "Sarah Jenkins",
+    role: "Directrice Générale chez Fisora",
+    quote: "L'accompagnement d'EduNex a transformé nos ventes. La boutique en ligne sur mesure qu'ils ont conçue a réduit nos abandons de panier de 35% grâce à un parcours ultra-rapide."
   },
   {
-    name: "Sarah D.",
-    role: "Operations Manager, Fisora E-commerce",
-    quote: "Unlike developers who talk only in terms of frameworks, Abdennour talked about conversions, checkout times, and customer retention. The Laravel store he engineered for us loads instantly and has eliminated our previous checkout friction."
+    name: "Marc-Antoine",
+    role: "Directeur de la Fondation Tagemi",
+    quote: "Le professionnalisme et l'attention portée à l'optimisation mobile ont permis à notre plateforme médicale d'être pleinement opérationnelle même dans les zones à faible bande passante."
   },
   {
-    name: "Jean-Marc L.",
-    role: "Technical Lead, Tagemi Foundation Project",
-    quote: "Collaborating with Abdennour on our NGO platform was a fantastic experience. He streamlined our volunteer registration API flow and organized our hosting, saving us thousands in yearly license fees compared to ready-made platforms."
+    name: "Elise Dupont",
+    role: "Fondatrice de la Maison Dupont",
+    quote: "EduNex comprend parfaitement les problématiques de conversion. Le site vitrine premium qu'ils ont réalisé pour notre établissement a doublé notre taux de réservation."
   }
 ];
 
 export const faqs = [
   {
-    question: "Why build a custom website instead of using template builders?",
-    answer: "Template builders like WordPress, Wix, or Shopify are great for quick prototypes, but they often come with bloated, slow code, costly monthly subscriptions, and rigid layouts. A bespoke React & Laravel platform is built exclusively for your business rules, loads in a fraction of a second (boosting SEO ranking), and can scale indefinitely as your business requirements grow without additional software constraints."
+    question: "Pourquoi choisir une solution sur mesure plutôt qu'un outil générique ?",
+    answer: "Les créateurs de sites génériques imposent souvent du code lourd et lent, des abonnements cumulatifs coûteux et des limites structurelles strictes. Un développement sur mesure par EduNex garantit des performances de chargement exceptionnelles (bénéfiques pour le SEO Google), une sécurité maximale, et une plateforme capable de s'adapter précisément à l'évolution de vos besoins métiers sans contraintes techniques tierces."
   },
   {
-    question: "How long will it take to build my platform?",
-    answer: "For custom landing pages or small shop setups, delivery is typically 2 to 3 weeks. Complex, full-stack React and Laravel web applications with custom database architecture typically take between 4 to 8 weeks. I work in sprints, sending staging link updates every week, so you are always closely involved in the validation process."
+    question: "Combien de temps prend la réalisation d'un projet ?",
+    answer: "La durée de conception varie selon la complexité : un site internet vitrine moderne se déploie en 2 à 3 semaines, tandis qu'une application métier sur mesure ou une plateforme SaaS nécessite généralement 4 à 8 semaines. Nous travaillons en mode agile, avec des livraisons hebdomadaires sur un environnement de préproduction pour que vous restiez impliqué à chaque étape."
   },
   {
-    question: "How do we handle communication and updates during the project?",
-    answer: "Transparency is key. We will use a shared dashboard where you can see active milestones, check tasks, and review files. We will communicate via email or Slack, and arrange weekly review calls to discuss progress and validate functional flows."
+    question: "Proposez-vous un accompagnement après la mise en ligne ?",
+    answer: "Tout à fait. Nous proposons des contrats de maintenance et de suivi : surveillance de l'hébergement, mises à jour de sécurité des bases de données, sauvegardes externalisées régulières et ajustements fonctionnels mineurs. De plus, nous livrons une documentation technique claire et des vidéos explicatives pour que vous puissiez administrer votre contenu en toute autonomie."
   },
   {
-    question: "Do you offer ongoing support after launch?",
-    answer: "Yes. I offer custom support plans that include monthly hosting monitoring, database security updates, off-site backups, and minor content adjustments. If you prefer to manage it yourself, I provide clean documentation and walking-through videos to help you operate the codebase independently."
-  },
-  {
-    question: "Can we meet locally to discuss my project?",
-    answer: "Absolutely. I am based in France, near Paris (Vélizy-Villacoublay), and can meet with clients locally in the Yvelines / Paris area. For clients located outside this region or abroad, I conduct all meetings via Zoom, Google Meet, and Slack."
+    question: "Où êtes-vous basés ? Est-il possible de se rencontrer ?",
+    answer: "L'équipe d'EduNex est basée à Toulouse, France. Nous pouvons tout à fait nous rencontrer localement en Occitanie pour initier vos projets. Pour les clients basés dans d'autres régions ou à l'étranger, nous gérons l'ensemble des échanges de façon fluide par visioconférence (Meet, Zoom) et Slack."
   }
 ];

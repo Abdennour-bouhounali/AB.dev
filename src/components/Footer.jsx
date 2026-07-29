@@ -1,69 +1,67 @@
 import { useTranslation } from 'react-i18next';
-import { developerInfo } from '../data/portfolioData';
+import { Link } from 'react-router-dom';
+import { companyInfo } from '../data/portfolioData';
 
 export default function Footer() {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/8 bg-black pt-16">
+    <footer className="border-t border-white/8 dark:border-white/8 light:border-zinc-200 bg-black dark:bg-black light:bg-zinc-100 pt-16">
       <div className="container mx-auto px-6 max-w-[1100px] grid grid-cols-1 md:grid-cols-2 gap-12 pb-12">
         <div className="max-w-[320px]">
-          <a href="#" className="font-heading font-extrabold text-xl tracking-tight text-white inline-block mb-3">
-            <span className="text-accent-blue">AB</span>.dev
-          </a>
-          <p className="text-zinc-400 text-xs font-normal leading-relaxed">
+          <Link to="/" className="font-heading font-extrabold text-xl tracking-tight text-white dark:text-white light:text-zinc-900 inline-block mb-3">
+            <span className="text-accent-blue">Edu</span>Nex
+          </Link>
+          <p className="text-zinc-400 dark:text-zinc-400 light:text-zinc-600 text-xs font-normal leading-relaxed">
             {t("footer.desc")}
           </p>
         </div>
         <div className="grid grid-cols-2 gap-8">
           <div className="flex flex-col gap-3">
-            <h4 className="text-[10px] uppercase tracking-wider text-zinc-500 font-bold mb-1">
+            <h4 className="text-[10px] uppercase tracking-wider text-zinc-500 dark:text-zinc-500 light:text-zinc-400 font-bold mb-1">
               {t("footer.nav")}
             </h4>
-            <a href="#about" className="text-zinc-400 hover:text-white text-xs transition-colors duration-150">
-              {t("nav.about")}
-            </a>
-            <a href="#services" className="text-zinc-400 hover:text-white text-xs transition-colors duration-150">
+            <Link to="/" className="text-zinc-400 dark:text-zinc-400 light:text-zinc-650 hover:text-white dark:hover:text-white light:hover:text-zinc-900 text-xs transition-colors duration-150">
+              Accueil
+            </Link>
+            <Link to="/solutions" className="text-zinc-400 dark:text-zinc-400 light:text-zinc-650 hover:text-white dark:hover:text-white light:hover:text-zinc-900 text-xs transition-colors duration-150">
               {t("nav.services")}
-            </a>
-            <a href="#projects" className="text-zinc-400 hover:text-white text-xs transition-colors duration-150">
+            </Link>
+            <Link to="/realisations" className="text-zinc-400 dark:text-zinc-400 light:text-zinc-650 hover:text-white dark:hover:text-white light:hover:text-zinc-900 text-xs transition-colors duration-150">
               {t("nav.work")}
-            </a>
-            <a href="#process" className="text-zinc-400 hover:text-white text-xs transition-colors duration-150">
-              {t("nav.process")}
-            </a>
-            <a href="#faq" className="text-zinc-400 hover:text-white text-xs transition-colors duration-150">
-              {t("nav.faq")}
-            </a>
+            </Link>
+            <Link to="/a-propos" className="text-zinc-400 dark:text-zinc-400 light:text-zinc-650 hover:text-white dark:hover:text-white light:hover:text-zinc-900 text-xs transition-colors duration-150">
+              {t("nav.about")}
+            </Link>
           </div>
           <div className="flex flex-col gap-3">
-            <h4 className="text-[10px] uppercase tracking-wider text-zinc-500 font-bold mb-1">
+            <h4 className="text-[10px] uppercase tracking-wider text-zinc-500 dark:text-zinc-500 light:text-zinc-400 font-bold mb-1">
               {t("footer.general")}
             </h4>
-            <a href="#privacy" className="text-zinc-400 hover:text-white text-xs transition-colors duration-150">
+            <a href="#" className="text-zinc-400 dark:text-zinc-400 light:text-zinc-650 hover:text-white dark:hover:text-white light:hover:text-zinc-900 text-xs transition-colors duration-150">
               {t("footer.privacy")}
             </a>
-            <a href="#terms" className="text-zinc-400 hover:text-white text-xs transition-colors duration-150">
+            <a href="#" className="text-zinc-400 dark:text-zinc-400 light:text-zinc-650 hover:text-white dark:hover:text-white light:hover:text-zinc-900 text-xs transition-colors duration-150">
               {t("footer.terms")}
             </a>
-            <span className="self-start text-[10px] font-semibold bg-white/4 border border-white/8 text-zinc-300 py-0.5 px-2 rounded-sm mt-1.5">
-              {t("footer.based")} {developerInfo.location}
+            <span className="self-start text-[10px] font-semibold bg-white/4 border border-white/8 dark:border-white/8 light:border-zinc-200 text-zinc-350 dark:text-zinc-300 light:text-zinc-700 py-0.5 px-2 rounded-sm mt-1.5">
+              {t("footer.based")} {companyInfo.city}, {companyInfo.location}
             </span>
           </div>
         </div>
       </div>
-      <div className="border-t border-white/8 py-8">
+      <div className="border-t border-white/8 dark:border-white/8 light:border-zinc-200/50 py-8">
         <div className="container mx-auto px-6 max-w-[1100px] flex flex-col-reverse md:flex-row justify-between items-center gap-4">
-          <p className="text-[11px] text-zinc-500">
-            &copy; {currentYear} {developerInfo.name}. {t("footer.rights")}
+          <p className="text-[11px] text-zinc-500 dark:text-zinc-500 light:text-zinc-600">
+            &copy; {currentYear} {companyInfo.name}. {t("footer.rights")}
           </p>
           <div className="flex gap-4">
             <a 
-              href={developerInfo.socials.github} 
+              href={companyInfo.socials.github} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-zinc-400 hover:text-white transition-all duration-200 hover:-translate-y-0.5"
+              className="text-zinc-400 dark:text-zinc-400 light:text-zinc-500 hover:text-white dark:hover:text-white light:hover:text-zinc-900 transition-all duration-200 hover:-translate-y-0.5"
               aria-label="GitHub"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
@@ -71,10 +69,10 @@ export default function Footer() {
               </svg>
             </a>
             <a 
-              href={developerInfo.socials.linkedin} 
+              href={companyInfo.socials.linkedin} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-zinc-400 hover:text-white transition-all duration-200 hover:-translate-y-0.5"
+              className="text-zinc-400 dark:text-zinc-400 light:text-zinc-500 hover:text-white dark:hover:text-white light:hover:text-zinc-900 transition-all duration-200 hover:-translate-y-0.5"
               aria-label="LinkedIn"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">

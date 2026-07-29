@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -12,8 +14,33 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 export default function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const pathToIdMap = {
+      '/solutions': 'services',
+      '/realisations': 'projects',
+      '/a-propos': 'about',
+      '/contact': 'contact'
+    };
+
+    const targetId = pathToIdMap[location.pathname];
+    if (targetId) {
+      // Add a slight delay to allow the DOM/images to stabilize on direct navigation
+      const timer = setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    } else if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location]);
+
   return (
-    <div className="relative min-h-screen bg-brand-black text-white font-body selection:bg-accent-blue selection:text-white">
+    <div className="relative min-h-screen font-body selection:bg-accent-blue selection:text-white">
       
       {/* Background Ambient Glow Lights */}
       <div className="ambient-glow glow-1"></div>
@@ -43,3 +70,4 @@ export default function Home() {
     </div>
   );
 }
+

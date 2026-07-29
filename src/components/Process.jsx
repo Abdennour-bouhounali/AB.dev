@@ -14,10 +14,10 @@ export default function Process() {
           <span className="inline-block text-[10px] uppercase tracking-wider text-accent-blue font-bold mb-3">
             {t("process.title")}
           </span>
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-white tracking-tight leading-snug">
+          <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-zinc-900 dark:text-white tracking-tight leading-snug">
             {t("process.headline")}
           </h2>
-          <p className="text-zinc-400 text-xs sm:text-sm max-w-[520px] mx-auto mt-4 leading-relaxed">
+          <p className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm max-w-[520px] mx-auto mt-4 leading-relaxed">
             {t("process.desc")}
           </p>
         </div>
@@ -32,17 +32,17 @@ export default function Process() {
             >
               {/* Dot badge */}
               <div className="absolute -start-8 sm:-start-16 w-8 sm:w-[60px] flex justify-center z-10">
-                <span className="w-9 h-9 border border-accent-blue bg-black text-white font-heading font-bold text-xs flex items-center justify-center rounded-full shadow-[0_0_10px_rgba(0,102,255,0.15)]">
+                <span className="w-9 h-9 border border-accent-blue bg-black dark:bg-black light:bg-white text-white dark:text-white light:text-zinc-900 font-heading font-bold text-xs flex items-center justify-center rounded-full shadow-[0_0_10px_rgba(0,102,255,0.15)]">
                   {step.num}
                 </span>
               </div>
 
               {/* Card info */}
-              <div className="bg-surface-card border border-white/8 p-5 sm:p-6 rounded-md hover:border-white/15 hover:translate-x-0.5 transition-all duration-200">
-                <h3 className="font-heading font-bold text-white text-sm sm:text-base mb-2">
+              <div className="bg-surface-card dark:bg-surface-card light:bg-white border border-white/8 dark:border-white/8 light:border-zinc-200 p-5 sm:p-6 rounded-md hover:border-white/15 dark:hover:border-white/15 light:hover:border-zinc-300 hover:translate-x-0.5 transition-all duration-200">
+                <h3 className="font-heading font-bold text-zinc-900 dark:text-white text-sm sm:text-base mb-2">
                   {t(`process.steps.${step.num}.title`)}
                 </h3>
-                <p className="text-zinc-400 text-xs leading-relaxed">
+                <p className="text-zinc-500 dark:text-zinc-400 text-xs leading-relaxed">
                   {t(`process.steps.${step.num}.desc`)}
                 </p>
               </div>

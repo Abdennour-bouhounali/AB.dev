@@ -10,10 +10,12 @@ export default function Projects() {
   const { t } = useTranslation();
   const [filter, setFilter] = useState('all');
   const [activeSlides, setActiveSlides] = useState({
+    essalam: 0,
     tagemi: 0,
     fisora: 0,
+    maisonsaha: 0,
     mansouria: 0,
-    maisonsaha: 0
+    excellens: 0
   });
 
   useEffect(() => {
@@ -39,40 +41,16 @@ export default function Projects() {
     }));
   };
 
-  const localizedProjects = projects.map((project) => {
-    const key = project.id;
-    return {
-      ...project,
-      title: t(`projects.${key}.title`),
-      summary: t(`projects.${key}.summary`),
-      bullets: [
-        t(`projects.${key}.bullet1`),
-        t(`projects.${key}.bullet2`),
-        t(`projects.${key}.bullet3`)
-      ],
-      metrics: [
-        { 
-          num: t(`projects.${key}.metric1Val`), 
-          label: t(`projects.${key}.metric1Lbl`) 
-        },
-        { 
-          num: t(`projects.${key}.metric2Val`), 
-          label: t(`projects.${key}.metric2Lbl`) 
-        }
-      ]
-    };
-  });
-
-  const filteredProjects = localizedProjects.filter((project) => {
+  const filteredProjects = projects.filter((project) => {
     if (filter === 'all') return true;
-    if (filter === 'ecommerce') return project.type === 'shop';
-    if (filter === 'nonprofit') return project.type === 'foundation';
-    if (filter === 'concept') return project.type === 'concept';
+    if (filter === 'ecommerce') return project.type === 'ecommerce';
+    if (filter === 'nonprofit') return project.type === 'association' || project.type === 'medical';
+    if (filter === 'concept') return project.type === 'vitrine' || project.type === 'rd';
     return true;
   });
 
   return (
-    <section id="projects" className="py-28 bg-brand-dark-gray border-t border-white/8 relative overflow-hidden">
+    <section id="projects" className="py-28 bg-brand-dark-gray dark:bg-brand-dark-gray light:bg-zinc-50 border-t border-white/8 dark:border-white/8 light:border-zinc-200 relative overflow-hidden">
       
       {/* Background glow overlay */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -97,7 +75,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-heading font-bold text-3xl sm:text-4xl text-white tracking-tight leading-snug"
+            className="font-heading font-bold text-3xl sm:text-4xl text-zinc-900 dark:text-white tracking-tight leading-snug"
           >
             {t("projects.subtitle")}
           </motion.h2>
@@ -106,7 +84,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-zinc-400 text-xs sm:text-sm max-w-[500px] mx-auto mt-4 leading-relaxed"
+            className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm max-w-[500px] mx-auto mt-4 leading-relaxed"
           >
             {t("projects.desc")}
           </motion.p>
@@ -125,8 +103,8 @@ export default function Projects() {
               onClick={() => setFilter(tab.id)}
               className={`relative px-4 py-2 text-xs font-semibold rounded-full border transition-all duration-300 cursor-pointer ${
                 filter === tab.id 
-                  ? 'text-white border-accent-blue/30 bg-accent-blue/8 shadow-[0_0_15px_rgba(59,130,246,0.1)]' 
-                  : 'text-zinc-400 border-white/8 hover:text-white hover:border-white/20'
+                  ? 'text-zinc-900 dark:text-white border-accent-blue/30 dark:border-accent-blue/30 light:border-accent-blue bg-accent-blue/8 shadow-[0_0_15px_rgba(59,130,246,0.1)]' 
+                  : 'text-zinc-500 dark:text-zinc-400 border-white/8 dark:border-white/8 light:border-zinc-250 hover:text-zinc-900 dark:hover:text-white hover:border-white/20 dark:hover:border-white/20 light:hover:border-zinc-300'
               }`}
             >
               {tab.label}
@@ -162,36 +140,38 @@ export default function Projects() {
                       <span className="text-[10px] font-bold text-accent-purple tracking-widest uppercase select-none">
                         0{index + 1} / {t("projects.study")}
                       </span>
-                      {project.category && (
-                        <span className="text-[9px] font-semibold text-zinc-400 border border-white/10 bg-white/3 px-2.5 py-1 rounded-full uppercase tracking-wider select-none">
-                          {project.category}
+                      {project.type && (
+                        <span className="text-[9px] font-semibold text-zinc-650 dark:text-zinc-400 border border-white/10 dark:border-white/10 light:border-zinc-200 bg-white/3 dark:bg-white/3 light:bg-zinc-100 px-2.5 py-1 rounded-full uppercase tracking-wider select-none">
+                          {project.type === 'rd' ? 'R&D' : project.type}
                         </span>
                       )}
                       {project.status && (
-                        <span className="text-[9px] font-bold text-amber-400/80 border border-amber-400/20 bg-amber-400/5 px-2.5 py-1 rounded-full uppercase tracking-wider select-none">
+                        <span className="text-[9px] font-bold text-amber-500/80 border border-amber-550/20 dark:border-amber-500/20 light:border-amber-400 bg-amber-500/5 px-2.5 py-1 rounded-full uppercase tracking-wider select-none">
                           {project.status}
                         </span>
                       )}
                     </div>
 
-                    <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white mb-4 tracking-tight hover:text-accent-blue transition-colors duration-200">
+                    <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-zinc-900 dark:text-white mb-4 tracking-tight hover:text-accent-blue dark:hover:text-accent-blue transition-colors duration-200">
                       {project.title}
                     </h3>
-                    <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed mb-6">
+                    <p className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm leading-relaxed mb-6">
                       {project.summary}
                     </p>
 
                     {/* Bullet results list */}
-                    <ul className="flex flex-col gap-3 mb-6">
-                      {project.bullets.map((bullet, rIdx) => (
-                        <li key={rIdx} className="flex items-start gap-2.5 text-xs text-zinc-300">
-                          <span className="w-4 h-4 rounded-full bg-accent-blue/10 border border-accent-blue/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Check className="w-2.5 h-2.5 text-accent-blue" />
-                          </span>
-                          <span>{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    {project.bullets && (
+                      <ul className="flex flex-col gap-3 mb-6">
+                        {project.bullets.map((bullet, rIdx) => (
+                          <li key={rIdx} className="flex items-start gap-2.5 text-xs text-zinc-700 dark:text-zinc-300">
+                            <span className="w-4 h-4 rounded-full bg-accent-blue/10 border border-accent-blue/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <Check className="w-2.5 h-2.5 text-accent-blue" />
+                            </span>
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                     
                     {/* Tech Tags */}
                     <div className="flex flex-wrap gap-2 mb-8">
@@ -199,7 +179,7 @@ export default function Projects() {
                         <motion.span 
                           key={techItem}
                           whileHover={{ scale: 1.05, borderColor: 'rgba(99, 91, 255, 0.3)', backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
-                          className="text-[10px] font-semibold text-white bg-white/3 border border-white/8 py-1 px-3 rounded-full cursor-default select-none transition-colors"
+                          className="text-[10px] font-semibold text-zinc-800 dark:text-white bg-white/3 dark:bg-white/3 light:bg-zinc-100 border border-white/8 dark:border-white/8 light:border-zinc-200 py-1 px-3 rounded-full cursor-default select-none transition-colors"
                         >
                           {techItem}
                         </motion.span>
@@ -207,10 +187,10 @@ export default function Projects() {
                     </div>
 
                     {/* Metrics with Animated Counter */}
-                    <div className="flex gap-8 border-t border-white/5 pt-6 mb-8">
+                    <div className="flex gap-8 border-t border-white/5 dark:border-white/5 light:border-zinc-200 pt-6 mb-8">
                       {project.metrics.map((metric, mIndex) => (
                         <div key={mIndex} className="flex flex-col">
-                          <span className="font-heading font-bold text-xl sm:text-2xl text-white">
+                          <span className="font-heading font-bold text-xl sm:text-2xl text-zinc-900 dark:text-white">
                             <AnimatedCounter value={metric.num} />
                           </span>
                           <span className="text-[10px] text-zinc-500 uppercase tracking-wider font-semibold">
@@ -220,29 +200,18 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    {/* CTA — concept projects get premium button, live projects get underline link */}
-                    {project.type === 'concept' ? (
-                      <Magnetic>
-                        <motion.a
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          whileHover={{ scale: 1.03 }}
-                          whileTap={{ scale: 0.97 }}
-                          className="inline-flex items-center gap-2 self-start px-5 py-2.5 rounded-full text-xs font-bold text-white bg-gradient-to-r from-accent-purple to-accent-blue shadow-[0_0_20px_rgba(99,91,255,0.25)] hover:shadow-[0_0_30px_rgba(99,91,255,0.4)] border border-white/10 transition-all duration-300"
-                        >
-                          <Globe className="w-3.5 h-3.5" />
-                          <span>{project.ctaLabel || t("projects.visit")}</span>
-                          <ArrowUpRight className="w-3.5 h-3.5" />
-                        </motion.a>
-                      </Magnetic>
+                    {/* CTA link */}
+                    {project.status ? (
+                      <div className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-450 dark:text-zinc-550 border-b-2 border-transparent pb-0.5 self-start select-none">
+                        <span>Lancement prévu prochainement</span>
+                      </div>
                     ) : (
                       <Magnetic>
                         <a 
                           href={project.url} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-white border-b-2 border-accent-blue pb-0.5 self-start hover:text-accent-purple hover:border-accent-purple transition-all duration-200"
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 dark:text-white border-b-2 border-accent-blue pb-0.5 self-start hover:text-accent-purple hover:border-accent-purple transition-all duration-200"
                         >
                           <span>{t("projects.visit")} {project.domain}</span>
                           <ExternalLink className="w-3.5 h-3.5" />
@@ -255,78 +224,146 @@ export default function Projects() {
                   <div className={`lg:col-span-6 flex items-center justify-center ${
                     isReversed ? "lg:order-1" : "lg:order-2"
                   }`}>
-                    <motion.a 
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ y: -5 }}
-                      transition={{ duration: 0.3 }}
-                      className="w-full max-w-[480px] h-[380px] bg-black border border-white/8 rounded-sm shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col overflow-hidden hover:border-accent-blue/30 transition-colors duration-300 group/mockup cursor-pointer"
-                    >
-                      
-                      {/* Mockup Header */}
-                      <div className="h-7.5 bg-surface-card flex items-center px-3.5 gap-1.5 border-b border-white/8 flex-shrink-0">
-                        <div className="flex gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-zinc-700"></span>
-                          <span className="w-1.5 h-1.5 rounded-full bg-zinc-700"></span>
-                          <span className="w-1.5 h-1.5 rounded-full bg-zinc-700"></span>
-                        </div>
-                        <span className="text-[9px] text-zinc-500 font-mono ml-4 select-none">
-                          {project.domain}
-                        </span>
-                      </div>
-
-                      {/* Mockup Body with Scrollable Carousel */}
-                      <div className="flex-grow relative bg-[#030303] overflow-hidden select-none">
-                        <AnimatePresence mode="wait">
-                          {project.images && project.images.map((img, imgIdx) => (
-                            currentSlide === imgIdx && (
-                              <motion.div 
-                                key={imgIdx}
-                                initial={{ opacity: 0, scale: 0.98 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.5 }}
-                                className="absolute inset-0"
-                              >
-                                <img 
-                                  src={img} 
-                                  alt={`${project.title} screenshot ${imgIdx + 1}`}
-                                  className="w-full h-full object-cover object-top transition-transform duration-[6s] ease-in-out group-hover/mockup:scale-103"
-                                />
-                              </motion.div>
-                            )
-                          ))}
-                        </AnimatePresence>
-
-                        {/* Ambient shadow gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10 z-15 pointer-events-none" />
-
-                        {/* Interactive slide indicators */}
-                        {project.images && project.images.length > 1 && (
-                          <div className="absolute bottom-4.5 left-1/2 -translate-x-1/2 flex gap-1.5 z-20 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10">
-                            {project.images.map((_, imgIdx) => (
-                              <button
-                                key={imgIdx}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  e.stopPropagation();
-                                  handleSlideChange(project.id, imgIdx);
-                                }}
-                                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                                  currentSlide === imgIdx 
-                                    ? "bg-accent-blue scale-125 shadow-[0_0_6px_#3b82f6]" 
-                                    : "bg-white/30 hover:bg-white/60"
-                                }`}
-                                title={`Slide ${imgIdx + 1}`}
-                                aria-label={`Go to slide ${imgIdx + 1}`}
-                              />
-                            ))}
+                    {project.status ? (
+                      <div className="w-full max-w-[480px] h-[380px] bg-black border border-white/8 dark:border-white/8 light:border-zinc-200 rounded-sm shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col overflow-hidden hover:border-accent-blue/10 transition-colors duration-300 group/mockup cursor-default">
+                        
+                        {/* Mockup Header */}
+                        <div className="h-7.5 bg-surface-card dark:bg-surface-card light:bg-zinc-100 flex items-center px-3.5 gap-1.5 border-b border-white/8 dark:border-white/8 light:border-zinc-200 flex-shrink-0">
+                          <div className="flex gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-zinc-700"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-zinc-700"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-zinc-700"></span>
                           </div>
-                        )}
-                      </div>
+                          <span className="text-[9px] text-zinc-500 font-mono ml-4 select-none">
+                            {project.domain}
+                          </span>
+                        </div>
 
-                    </motion.a>
+                        {/* Mockup Body with Scrollable Carousel */}
+                        <div className="flex-grow relative bg-[#030303] overflow-hidden select-none">
+                          <AnimatePresence mode="wait">
+                            {project.images && project.images.map((img, imgIdx) => (
+                              currentSlide === imgIdx && (
+                                <motion.div 
+                                  key={imgIdx}
+                                  initial={{ opacity: 0, scale: 0.98 }}
+                                  animate={{ opacity: 1, scale: 1 }}
+                                  exit={{ opacity: 0 }}
+                                  transition={{ duration: 0.5 }}
+                                  className="absolute inset-0"
+                                >
+                                  <img 
+                                    src={img} 
+                                    alt={`${project.title} screenshot ${imgIdx + 1}`}
+                                    className="w-full h-full object-cover object-top transition-transform duration-[6s] ease-in-out"
+                                  />
+                                </motion.div>
+                              )
+                            ))}
+                          </AnimatePresence>
+
+                          {/* Ambient shadow gradient */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10 z-15 pointer-events-none" />
+
+                          {/* Interactive slide indicators */}
+                          {project.images && project.images.length > 1 && (
+                            <div className="absolute bottom-4.5 left-1/2 -translate-x-1/2 flex gap-1.5 z-20 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10">
+                              {project.images.map((_, imgIdx) => (
+                                <button
+                                  key={imgIdx}
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    handleSlideChange(project.id, imgIdx);
+                                  }}
+                                  className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                                    currentSlide === imgIdx 
+                                      ? "bg-accent-blue scale-125 shadow-[0_0_6px_#3b82f6]" 
+                                      : "bg-white/30 hover:bg-white/60"
+                                  }`}
+                                  title={`Slide ${imgIdx + 1}`}
+                                  aria-label={`Go to slide ${imgIdx + 1}`}
+                                />
+                              ))}
+                            </div>
+                          )}
+                        </div>
+
+                      </div>
+                    ) : (
+                      <motion.a 
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ y: -5 }}
+                        transition={{ duration: 0.3 }}
+                        className="w-full max-w-[480px] h-[380px] bg-black border border-white/8 dark:border-white/8 light:border-zinc-200 rounded-sm shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col overflow-hidden hover:border-accent-blue/30 transition-colors duration-300 group/mockup cursor-pointer"
+                      >
+                        
+                        {/* Mockup Header */}
+                        <div className="h-7.5 bg-surface-card dark:bg-surface-card light:bg-zinc-100 flex items-center px-3.5 gap-1.5 border-b border-white/8 dark:border-white/8 light:border-zinc-200 flex-shrink-0">
+                          <div className="flex gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-zinc-700"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-zinc-700"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-zinc-700"></span>
+                          </div>
+                          <span className="text-[9px] text-zinc-500 font-mono ml-4 select-none">
+                            {project.domain}
+                          </span>
+                        </div>
+
+                        {/* Mockup Body with Scrollable Carousel */}
+                        <div className="flex-grow relative bg-[#030303] overflow-hidden select-none">
+                          <AnimatePresence mode="wait">
+                            {project.images && project.images.map((img, imgIdx) => (
+                              currentSlide === imgIdx && (
+                                <motion.div 
+                                  key={imgIdx}
+                                  initial={{ opacity: 0, scale: 0.98 }}
+                                  animate={{ opacity: 1, scale: 1 }}
+                                  exit={{ opacity: 0 }}
+                                  transition={{ duration: 0.5 }}
+                                  className="absolute inset-0"
+                                >
+                                  <img 
+                                    src={img} 
+                                    alt={`${project.title} screenshot ${imgIdx + 1}`}
+                                    className="w-full h-full object-cover object-top transition-transform duration-[6s] ease-in-out group-hover/mockup:scale-103"
+                                  />
+                                </motion.div>
+                              )
+                            ))}
+                          </AnimatePresence>
+
+                          {/* Ambient shadow gradient */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10 z-15 pointer-events-none" />
+
+                          {/* Interactive slide indicators */}
+                          {project.images && project.images.length > 1 && (
+                            <div className="absolute bottom-4.5 left-1/2 -translate-x-1/2 flex gap-1.5 z-20 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10">
+                              {project.images.map((_, imgIdx) => (
+                                <button
+                                  key={imgIdx}
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    handleSlideChange(project.id, imgIdx);
+                                  }}
+                                  className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                                    currentSlide === imgIdx 
+                                      ? "bg-accent-blue scale-125 shadow-[0_0_6px_#3b82f6]" 
+                                      : "bg-white/30 hover:bg-white/60"
+                                  }`}
+                                  title={`Slide ${imgIdx + 1}`}
+                                  aria-label={`Go to slide ${imgIdx + 1}`}
+                                />
+                              ))}
+                            </div>
+                          )}
+                        </div>
+
+                      </motion.a>
+                    )}
                   </div>
 
                 </motion.div>

@@ -9,49 +9,49 @@ export default function WhyWorkWithMe() {
     {
       icon: Languages,
       title: t("why.supportFr"),
-      desc: "Direct communication in French for clients based in France or Europe.",
+      desc: "Communication directe en français pour une collaboration simple, fluide et réactive.",
       color: "text-accent-blue bg-accent-blue/10 border-accent-blue/20"
     },
     {
-      icon: Languages,
+      icon: ShieldCheck,
       title: t("why.supportEn"),
-      desc: "Full business fluency for global, international collaboration.",
+      desc: "Un accompagnement technique réactif et basé en France pour répondre à vos urgences.",
       color: "text-accent-purple bg-accent-purple/10 border-accent-purple/20"
     },
     {
-      icon: Languages,
+      icon: HeartHandshake,
       title: t("why.supportAr"),
-      desc: "Native Arabic communication including complete RTL direction support.",
+      desc: "Des cycles de développement courts avec des livraisons hebdomadaires sur environnement de staging.",
       color: "text-accent-emerald bg-accent-emerald/10 border-accent-emerald/20"
     },
     {
       icon: Clock,
       title: t("why.fastDelivery"),
-      desc: "Agile workflows and rapid prototyping to hit launch deadlines without lag.",
+      desc: "Planification rigoureuse et sprints de développement pour garantir le respect de vos dates de lancement.",
       color: "text-accent-purple bg-accent-purple/10 border-accent-purple/20"
     },
     {
       icon: Smartphone,
       title: t("why.mobileFirst"),
-      desc: "Perfect display across all mobile dimensions (from 320px to large desktop screens).",
+      desc: "Interfaces entièrement optimisées pour tous les écrans, du smartphone à l'écran géant.",
       color: "text-accent-blue bg-accent-blue/10 border-accent-blue/20"
     },
     {
       icon: Search,
       title: t("why.seoReady"),
-      desc: "Fully optimized semantic HTML structure and JSON-LD schemas for search engines.",
+      desc: "Code sémantique optimisé et temps de chargement ultra-rapides pour maximiser votre classement Google.",
       color: "text-accent-emerald bg-accent-emerald/10 border-accent-emerald/20"
     },
     {
       icon: Code2,
       title: t("why.modernStack"),
-      desc: "Utilizing React, Tailwind CSS, and Laravel for secure, maintainable codebases.",
+      desc: "Utilisation de React, Tailwind CSS et Laravel pour concevoir des produits sécurisés et faciles à maintenir.",
       color: "text-accent-purple bg-accent-purple/10 border-accent-purple/20"
     }
   ];
 
   return (
-    <section className="py-20 sm:py-24 bg-brand-black border-t border-white/8 relative overflow-hidden">
+    <section className="py-20 sm:py-24 bg-brand-black dark:bg-brand-black light:bg-zinc-50 border-t border-white/8 dark:border-white/8 light:border-zinc-200 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-[1100px]">
         
         {/* Header */}
@@ -59,8 +59,8 @@ export default function WhyWorkWithMe() {
           <span className="inline-block text-[10px] uppercase tracking-wider text-accent-blue font-bold mb-3">
             {t("why.title")}
           </span>
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-white tracking-tight leading-snug">
-            Strategic advantages for your business
+          <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-zinc-900 dark:text-white tracking-tight leading-snug">
+            Des avantages stratégiques pour votre entreprise
           </h2>
         </div>
 
@@ -74,14 +74,14 @@ export default function WhyWorkWithMe() {
                 direction="up"
                 className="flex"
               >
-                <div className="w-full bg-surface-card border border-white/8 p-6 sm:p-8 rounded-md flex flex-col hover:border-white/15 hover:bg-surface-card-hover transition-all duration-300">
+                <div className="w-full bg-surface-card dark:bg-surface-card light:bg-white border border-white/8 dark:border-white/8 light:border-zinc-200 p-6 sm:p-8 rounded-md flex flex-col hover:border-white/15 dark:hover:border-white/15 light:hover:border-zinc-300 hover:bg-surface-card-hover transition-all duration-300">
                   <div className={`w-10 h-10 rounded-sm flex items-center justify-center mb-6 border ${item.color}`}>
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="font-heading font-bold text-white text-sm sm:text-base mb-3">
+                  <h3 className="font-heading font-bold text-zinc-900 dark:text-white text-sm sm:text-base mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-zinc-400 text-xs leading-relaxed">
+                  <p className="text-zinc-500 dark:text-zinc-400 text-xs leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

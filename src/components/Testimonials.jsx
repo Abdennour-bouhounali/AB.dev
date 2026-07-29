@@ -7,7 +7,7 @@ export default function Testimonials() {
   const { t } = useTranslation();
 
   return (
-    <section className="py-20 sm:py-24 bg-brand-dark-gray border-t border-white/8">
+    <section className="py-20 sm:py-24 bg-brand-dark-gray dark:bg-brand-dark-gray light:bg-zinc-50 border-t border-white/8 dark:border-white/8 light:border-zinc-200">
       <div className="container mx-auto px-6 max-w-[1100px]">
         
         {/* Header */}
@@ -15,10 +15,10 @@ export default function Testimonials() {
           <span className="inline-block text-[10px] uppercase tracking-wider text-accent-blue font-bold mb-3">
             {t("testimonials.title")}
           </span>
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-white tracking-tight leading-snug">
+          <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-zinc-900 dark:text-white tracking-tight leading-snug">
             {t("testimonials.headline")}
           </h2>
-          <p className="text-zinc-400 text-xs sm:text-sm max-w-[520px] mx-auto mt-4 leading-relaxed">
+          <p className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm max-w-[520px] mx-auto mt-4 leading-relaxed">
             {t("testimonials.desc")}
           </p>
         </div>
@@ -31,23 +31,23 @@ export default function Testimonials() {
               direction="up" 
               className="flex"
             >
-              <div className="w-full bg-surface-card border border-white/8 p-6 sm:p-8 rounded-md flex flex-col justify-between hover:border-white/15 transition-all duration-200">
+              <div className="w-full bg-surface-card dark:bg-surface-card light:bg-white border border-white/8 dark:border-white/8 light:border-zinc-200 p-6 sm:p-8 rounded-md flex flex-col justify-between hover:border-white/15 dark:hover:border-white/15 light:hover:border-zinc-300 transition-all duration-200">
                 <div>
                   <div className="flex gap-0.5 mb-4 justify-start">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-3.5 h-3.5 fill-accent-blue text-accent-blue" />
                     ))}
                   </div>
-                  <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed italic mb-6">
+                  <p className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm leading-relaxed italic mb-6">
                     "{t(`testimonials.items.${index}.quote`)}"
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="flex flex-col">
-                    <span className="font-heading font-semibold text-white text-xs">
+                    <span className="font-heading font-semibold text-zinc-900 dark:text-white text-xs">
                       {t(`testimonials.items.${index}.name`)}
                     </span>
-                    <span className="text-[10px] text-zinc-500">
+                    <span className="text-[10px] text-zinc-550 dark:text-zinc-500">
                       {t(`testimonials.items.${index}.role`)}
                     </span>
                   </div>
